@@ -40,6 +40,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+I learned that express is powerful and we use it to convert our api code into JSON format. It lightweight and very easy to unpack.
+
 - [ ] Describe Middleware?
 
 - [ ] Describe a Resource?
