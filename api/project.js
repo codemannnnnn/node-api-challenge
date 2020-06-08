@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../data/helpers/projectModel.js");
+const aDb = require("../data/helpers/actionModel.js");
 
 //POSTs
 router.post("/", (req, res) => {
@@ -17,6 +18,15 @@ router.post("/", (req, res) => {
 //GETs
 router.get("/:id", validateUserId, (req, res) => {
   res.status(200).json(req.e);
+});
+
+router.get("/:id/all", (req, res) => {
+  const { id } = req.params;
+  db.getProjectActions(id)
+    .then((e) => {
+      res.status(200).json({ actions: e });
+    })
+    .catch((err) => console.log(err));
 });
 
 //PUTs
