@@ -12,7 +12,13 @@ server.use(morgan("dev"));
 server.use("/api/action", actionRouter);
 server.use("/api/project", projectRouter);
 server.use("/api/projects", (req, res) => {
-  res.status(200).send();
+  db.get()
+    .then((e) => {
+      res.status(200).json({ Projects: e });
+    })
+    .catch((e) => {
+      res.status(500).json({ message: "error with db" });
+    });
 });
 
 // test get request
