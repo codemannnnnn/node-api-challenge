@@ -17,8 +17,8 @@ server.get("/", function (req, res) {
     environment: process.env.NODE_ENV,
     port: process.env.PORT,
     greeting: process.env.GREETING,
+    hey: process.env.HEY,
   });
 });
 
-// module
 module.exports = server;
