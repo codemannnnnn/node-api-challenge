@@ -44,11 +44,19 @@ I learned that express is powerful and we use it to convert our api code into JS
 
 - [ ] Describe Middleware?
 
+Middleware are functions we can throw in our code to do things for us. IE we can write one validation function and use it on multiple CRUD operations.
+
 - [ ] Describe a Resource?
+
+I'm somewhat confused on this question. I would say a Resource would be any of the 3rd parties we pull in our code to make things easier, like Express.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
+A body of data on success or an error message to let them know something went south.
+
 - [ ] How can we partition our application into sub-applications?
+
+I'm thinking this is relating to writing middleware in express that act as sub apps that we can pass around our code and utilize DRY coding.
 
 ## Minimum Viable Product
 
