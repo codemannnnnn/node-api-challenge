@@ -13,7 +13,7 @@ router.post("/:id", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
-// GET
+// GET reqs
 
 router.get("/:id", validateUserId, (req, res) => {
   res.status(200).json(req.e);
