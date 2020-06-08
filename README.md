@@ -48,7 +48,7 @@ Middleware are functions we can throw in our code to do things for us. IE we can
 
 - [ ] Describe a Resource?
 
-I'm somewhat confused on this question. I would say a Resource would be any of the 3rd parties we pull in our code to make things easier, like Express.
+Resourdes are the database schema we use to structure our code.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
