@@ -12,8 +12,12 @@ server.use("/api/action", actionRouter);
 server.use("/api/project", projectRouter);
 
 // test get request
-server.get("/", (req, res) => {
-  res.send(`Let's write some code!`);
+server.get("/", function (req, res) {
+  res.status(200).json({
+    environment: process.env.NODE_ENV,
+    port: process.env.PORT,
+    greeting: process.env.GREETING,
+  });
 });
 
 module.exports = server;
