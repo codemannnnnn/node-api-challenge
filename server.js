@@ -3,6 +3,7 @@ const server = express();
 const morgan = require("morgan");
 const actionRouter = require("./api/action.js");
 const projectRouter = require("./api/project.js");
+const db = require("./data/helpers/projectModel.js");
 
 //global middleware
 server.use(express.json());
@@ -10,6 +11,9 @@ server.use(morgan("dev"));
 
 server.use("/api/action", actionRouter);
 server.use("/api/project", projectRouter);
+server.use("/api/projects", (req, res) => {
+  res.status(200).send();
+});
 
 // test get request
 server.get("/", function (req, res) {

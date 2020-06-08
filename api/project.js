@@ -16,6 +16,16 @@ router.post("/", (req, res) => {
 });
 
 //GETs
+
+router.get("/", (req, res) => {
+  db.get()
+    .then((e) => {
+      res.status(200).json({ Projects: e });
+    })
+    .catch((e) => {
+      res.status(500).json({ message: "error with db" });
+    });
+});
 router.get("/:id", validateUserId, (req, res) => {
   res.status(200).json(req.e);
 });
